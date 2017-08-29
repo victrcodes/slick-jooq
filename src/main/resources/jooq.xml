@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<configuration>
+    <jdbc>
+        <driver>org.h2.Driver</driver>
+        <url>jdbc:h2:mem:test1;DB_CLOSE_DELAY=-1;INIT=runscript from 'src/main/resources/create.sql'</url>
+    </jdbc>
+    <generator>
+        <database>
+            <name>org.jooq.util.h2.H2Database</name>
+            <!--<inputSchema>public</inputSchema>-->
+            <includes>.*</includes>
+        </database>
+        <generate>
+            <pojos>false</pojos>
+            <interfaces>true</interfaces>
+        </generate>
+        <target>
+            <packageName>db</packageName>
+            <directory>src/main/java</directory>
+        </target>
+    </generator>
+</configuration>

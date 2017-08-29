@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS user (
+	id INTEGER AUTO_INCREMENT PRIMARY KEY,
+	name VARCHAR NOT NULL,
+	address VARCHAR NOT NULL
+);
+
+INSERT INTO user (name, address) VALUES ('John Smith', '66 Palm Street');
